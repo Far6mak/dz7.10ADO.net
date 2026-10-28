@@ -221,7 +221,11 @@ internal static class Program
         order.AddItem(dessert1);
         order.AddItem(dessert2);
 
-        var combo = new Combo("Комбо «Обед»", new MenuItem[] { pizza1, drink1 });
+        var combo = new Combo("Комбо «Обед»", new MenuItem[]
+        {
+            new Pizza("Мини-пицца", 250m, 1),
+            new Drink("Сок в комбо", 60m, 200)
+        });
         order.AddItem(combo);
 
         order.PrintReceipt();
